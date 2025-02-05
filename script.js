@@ -38,15 +38,16 @@ const gameArea = document.querySelector('.game-area');
 const selectionArea = document.querySelector('.selection-container');
 let test = document.createElement('p');
 let test2 = document.createElement('button');
-// const gamePrompt
+const gamePrompt = document.querySelector('#game-prompt');
 
-let textContent = document.createTextNode('This is a test!')
-let buttonContent = document.createTextNode('This is a button!')
-test.appendChild(textContent);
-test2.appendChild(buttonContent);
+gamePrompt.textContent = 'test';
+// let textContent = document.createTextNode('This is a test!')
+// let buttonContent = document.createTextNode('This is a button!')
+// test.appendChild(textContent);
+// test2.appendChild(buttonContent);
 
 
-promptContainer.appendChild(test);
-selectionArea.appendChild(test2);
+// promptContainer.appendChild(test);
+// selectionArea.appendChild(test2);
 
   
