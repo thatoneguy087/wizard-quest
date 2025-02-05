@@ -1,7 +1,12 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 .game-area {
   width: 640px;
   height: 380px;
-  background-color: black;
+  background-color: gray;
   margin: 0 auto;
   display: flex;
   justify-content: stretch;
@@ -9,9 +14,22 @@
 }
 p {
   color: white;
+  padding: 4px;
 }
 .text-area {
-  background-color: gray;
-  height: 30%;
+  background-color: black;
+  height: 33%;
   width: 100%;
+}
+
+.game-prompt {
+  width: 100%;
+  height: 33%;
+  background-color: red;
+}
+
+.selection-container {
+  width: 100%;
+  height: 67%;
+  background-color: blue;
 }

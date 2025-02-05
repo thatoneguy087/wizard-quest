@@ -26,14 +26,21 @@ function gameOver() {
   console.log('GAME OVER. REFRESH THE PAGE TO RESTART.');
 }
 
-console.log(game());
-let textArea = document.querySelector('.text-area');
-let gameArea = document.querySelector('.game-area');
+// console.log(game());
+const gamePrompt = document.querySelector('.game-prompt');
+const textArea = document.querySelector('.text-area');
+const gameArea = document.querySelector('.game-area');
+const selectionArea = document.querySelector('.selection-container');
 let test = document.createElement('p');
-let textContent = document.createTextNode('This is a test!')
-test.appendChild (textContent);
-textArea.appendChild(test);
-console.log(gameArea);
+let test2 = document.createElement('button');
 
+let textContent = document.createTextNode('This is a test!')
+let buttonContent = document.createTextNode('This is a button!')
+test.appendChild(textContent);
+test2.appendChild(buttonContent);
+
+
+gamePrompt.appendChild(test);
+selectionArea.appendChild(test2);
 
   
