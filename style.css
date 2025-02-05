@@ -1,0 +1,10 @@
+.game-area {
+  width: 640px;
+  height: 380px;
+  background-color: black;
+  margin: 0 auto;
+}
+
+p {
+  color: white;
+}

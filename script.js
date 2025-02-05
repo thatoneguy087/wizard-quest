@@ -28,5 +28,12 @@ function gameOver() {
 
 console.log(game());
 
+let gameArea = document.querySelector('.game-area');
+let test = document.createElement('p');
+let textContent = document.createTextNode('This is a test!')
+test.appendChild (textContent);
+gameArea.appendChild(test);
+console.log(gameArea);
+
 
   
