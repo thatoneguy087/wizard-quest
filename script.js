@@ -38,36 +38,43 @@
 // let test = document.createElement('p');
 // let test2 = document.createElement('button');
 
-
+//This is all just setup.
 const gamePrompt = document.querySelector('#game-prompt');
 const selectionArea = document.querySelector('.selection-container');
 console.log(selectionArea);
 gamePrompt.textContent = 'test';
 
+let playerChoice;
+let choice1 = document.createElement('button');
+choice1.classList.add('1', 'choice');
+choice1.textContent = 'test';
+
+let choice2 = document.createElement('button');
+choice2.classList.add('2', 'choice');
+choice2.textContent = 'test2';
+
+let choice3 = document.createElement('button');
+choice3.classList.add('3', 'choice');
+choice3.textContent = 'test3';
+
+let choice4 = document.createElement('button');
+choice4.classList.add('4', 'choice');
+choice4.textContent = 'test4';
+
 function game() {
-  let playerChoice;
-  let choice1 = document.createElement('button');
-  choice1.classList.add('1');
-  choice1.textContent = 'test';
-
-  let choice2 = document.createElement('button');
-  choice2.classList.add('2');
-  choice2.textContent = 'test2';
-
-  let choice3 = document.createElement('button');
-  choice3.classList.add('3');
-  choice3.textContent = 'test3';
-
-  let choice4 = document.createElement('button');
-  choice4.classList.add('4');
-  choice4.textContent = 'test4';
-
   gamePrompt.textContent = 'You wake up in total darkness. It smells weird and the floor is wet';
   selectionArea.appendChild(choice1);
   selectionArea.appendChild(choice2);
   selectionArea.appendChild(choice3);
   selectionArea.appendChild(choice4);
 
+  selectionArea.addEventListener('click', (event) => {
+    const isBtn = event.target.nodeName === 'BUTTON';
+    if (!isBtn) {
+      return;
+    };
+    console.log(event.target.classList[0]);
+  });
 }
 
 function path1() {
