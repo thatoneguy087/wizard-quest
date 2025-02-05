@@ -26,13 +26,19 @@ function gameOver() {
   console.log('GAME OVER. REFRESH THE PAGE TO RESTART.');
 }
 
+function noDecision() {
+  'Bad decision. Your actions have incurred the wrath of the Krondosmodius, god of choose-your-own-adventure games. You have been sent to 1000 years of purgatory';
+
+}
+
 // console.log(game());
-const gamePrompt = document.querySelector('.game-prompt');
+const promptContainer = document.querySelector('.prompt-container');
 const textArea = document.querySelector('.text-area');
 const gameArea = document.querySelector('.game-area');
 const selectionArea = document.querySelector('.selection-container');
 let test = document.createElement('p');
 let test2 = document.createElement('button');
+// const gamePrompt
 
 let textContent = document.createTextNode('This is a test!')
 let buttonContent = document.createTextNode('This is a button!')
@@ -40,7 +46,7 @@ test.appendChild(textContent);
 test2.appendChild(buttonContent);
 
 
-gamePrompt.appendChild(test);
+promptContainer.appendChild(test);
 selectionArea.appendChild(test2);
 
   
