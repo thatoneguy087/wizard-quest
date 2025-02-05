@@ -60,13 +60,20 @@ let choice4 = document.createElement('button');
 choice4.classList.add('4', 'choice');
 choice4.textContent = 'test4';
 
+//setup and start game
 function game() {
+  //setup prompts and whatnot
   gamePrompt.textContent = 'You wake up in total darkness. It smells weird and the floor is wet';
+
+  choice1.textContent = "1 - Try and walk around in the dark";
+  choice2.textContent = "2 - Cast a fire spell for light";
+  choice3.textContent = "3 - Take a nap";
+
   selectionArea.appendChild(choice1);
   selectionArea.appendChild(choice2);
   selectionArea.appendChild(choice3);
-  selectionArea.appendChild(choice4);
 
+  //choices
   selectionArea.addEventListener('click', (e) => {
     const isBtn = e.target.nodeName === 'BUTTON';
     if (!isBtn) {
@@ -75,33 +82,30 @@ function game() {
     playerChoice = Number(e.target.classList[0]);
     switch (playerChoice) {
       case 1:
-        console.log('you clicked 1');
+        path1();
         break;
       case 2:
-        console.log('2nd');
+        path2();
         break;
       case 3:
-        console.log('bababooey');
-        break;
-      case 4:
-        console.log('FORD');
+        path3();
         break;
       default:
-        console.log('A great error has occured');
+        alert('Unknown error has occured :(');
     }
   });
 }
 
 function path1() {
-
+  console.log('you clicked 1');
 }
 
 function path2() {
-
+  console.log('2nd');
 }
 
 function path3() {
-
+  console.log('bababooey');
 }
 
 game();
