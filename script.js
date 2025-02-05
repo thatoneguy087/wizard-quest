@@ -47,7 +47,7 @@ function setButtons(...btns) {
   let array = [];
   let x = 0;
   for (let btn of btns) {
-    choices[x].textContent = btn;
+    choices[x].textContent = (x+1) + ' - ' + btn;
     array.push(choices[x]);
     x++;
   }
@@ -81,15 +81,7 @@ let choices = [choice1, choice2, choice3, choice4];
 //setup and start game
 function game() {
   //setup prompts and whatnot
-  gamePrompt.textContent = 'You wake up in total darkness. It smells weird and the floor is wet';
-
-  choice1.textContent = "1 - Try and walk around in the dark";
-  choice2.textContent = "2 - Cast a fire spell for light";
-  choice3.textContent = "3 - Take a nap";
-
-  selectionArea.appendChild(choice1);
-  selectionArea.appendChild(choice2);
-  selectionArea.appendChild(choice3);
+  gameStart();
 
   //choices
   selectionArea.addEventListener('click', (e) => {
@@ -114,9 +106,14 @@ function game() {
   });
 }
 
+function gameStart() {
+  setGamePrompt('You wake up in total darkness. It smells weird and the floor is wet');
+  setButtons('Take a step forward in the dark', 'Cast lesser-fire for light', 'Take a nap');
+}
+
 function path1() {
   setGamePrompt('You try walking around in the dark and fall down a hole. Both of your legs are broken and youre bleeding out');
-  setButtons('1 - Bite your tongue off', '2 - Yell out for help', '3 - Cast a forbidden spell', '4 - Do nothing');
+  setButtons('Bite your tongue off', 'Yell out for help', 'Cast a forbidden spell', 'Do nothing');
 }
 
 function path2() {
