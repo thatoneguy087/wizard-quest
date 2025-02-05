@@ -41,7 +41,6 @@
 //This is all just setup.
 const gamePrompt = document.querySelector('#game-prompt');
 const selectionArea = document.querySelector('.selection-container');
-console.log(selectionArea);
 gamePrompt.textContent = 'test';
 
 let playerChoice;
@@ -68,12 +67,28 @@ function game() {
   selectionArea.appendChild(choice3);
   selectionArea.appendChild(choice4);
 
-  selectionArea.addEventListener('click', (event) => {
-    const isBtn = event.target.nodeName === 'BUTTON';
+  selectionArea.addEventListener('click', (e) => {
+    const isBtn = e.target.nodeName === 'BUTTON';
     if (!isBtn) {
       return;
     };
-    console.log(event.target.classList[0]);
+    playerChoice = Number(e.target.classList[0]);
+    switch (playerChoice) {
+      case 1:
+        console.log('you clicked 1');
+        break;
+      case 2:
+        console.log('2nd');
+        break;
+      case 3:
+        console.log('bababooey');
+        break;
+      case 4:
+        console.log('FORD');
+        break;
+      default:
+        console.log('A great error has occured');
+    }
   });
 }
 
