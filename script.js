@@ -38,6 +38,22 @@
 // let test = document.createElement('p');
 // let test2 = document.createElement('button');
 
+//Useful functions
+function setGamePrompt(p) {
+  gamePrompt.textContent = p;
+}
+
+function setButtons(...btns) {
+  let array = [];
+  let x = 0;
+  for (let btn of btns) {
+    choices[x].textContent = btn;
+    array.push(choices[x]);
+    x++;
+  }
+  selectionArea.replaceChildren(...array);
+}
+
 //This is all just setup.
 const gamePrompt = document.querySelector('#game-prompt');
 const selectionArea = document.querySelector('.selection-container');
@@ -59,6 +75,8 @@ choice3.textContent = 'test3';
 let choice4 = document.createElement('button');
 choice4.classList.add('4', 'choice');
 choice4.textContent = 'test4';
+
+let choices = [choice1, choice2, choice3, choice4];
 
 //setup and start game
 function game() {
@@ -91,13 +109,14 @@ function game() {
         path3();
         break;
       default:
-        alert('Unknown error has occured :(');
+        alert('Unknown error has occured');
     }
   });
 }
 
 function path1() {
-  console.log('you clicked 1');
+  setGamePrompt('You try walking around in the dark and fall down a hole. Both of your legs are broken and youre bleeding out');
+  setButtons('1 - Bite your tongue off', '2 - Yell out for help', '3 - Cast a forbidden spell', '4 - Do nothing');
 }
 
 function path2() {
