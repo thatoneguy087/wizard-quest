@@ -1,42 +1,4 @@
 'use strict'
-// function game() {
-//   let choice;
-//   console.log('Welcome to wizard quest!')
-//   let gameStart = prompt("Start the game? (0 = no, 1 = yes");
-//   if (gameStart == 1) {
-//     console.log('You wake up in total darkness. It smells weird and the floor is wet');
-//     console.log('1 - Try and walk around in the dark\n2 - Cast a fire spell for light\n2 - Take a nap');
-//     choice = prompt('Make your move');
-//     if (choice == 1) {
-//       console.log('You try walking around in the dark and fall down a hole. Both of your legs are broken and youre bleeding out')
-//     } else if (choice == 2) {
-//       console.log('You cast fire and notice a peculiar hole in the ground. "good thing I didnt try walking in the dark." You notice the path ahead splits into two paths. Which path do you take?')
-//     } else if (choice == 3) {
-//       console.log('You go to bed and have strange visions. A gorilla riding a unicycle? Really? Oh my god hes looking at you now. What do you do?')
-//     } else {
-//       console.log('Bad decision. Your actions have incurred the wrath of the Krondosmodius, god of choose-your-own-adventure games. You have been sent to 1000 years of purgatory');
-//     }
-
-//   } else {
-//     console.log('Awww. Maybe next time.');
-//   }
-// }
-
-// function gameOver() {
-//   console.log('GAME OVER. REFRESH THE PAGE TO RESTART.');
-// }
-
-// function noDecision() {
-//   'Bad decision. Your actions have incurred the wrath of the Krondosmodius, god of choose-your-own-adventure games. You have been sent to 1000 years of purgatory';
-
-// }
-
-// const promptContainer = document.querySelector('.prompt-container');
-// const textArea = document.querySelector('.text-area');
-// const gameArea = document.querySelector('.game-area');
-// const selectionArea = document.querySelector('.selection-container');
-// let test = document.createElement('p');
-// let test2 = document.createElement('button');
 
 //Useful functions
 function setGamePrompt(p) {
@@ -80,7 +42,6 @@ let choices = [choice1, choice2, choice3, choice4];
 
 //setup and start game
 function game() {
-  //setup prompts and whatnot
   gameStart();
 
   //choices
@@ -112,16 +73,18 @@ function gameStart() {
 }
 
 function path1() {
-  setGamePrompt('You try walking around in the dark and fall down a hole. Both of your legs are broken and youre bleeding out');
+  setGamePrompt(`You try take a setp forward in the dark and fall down a hole. Both of your legs are broken and you're bleeding out`);
   setButtons('Bite your tongue off', 'Yell out for help', 'Cast a forbidden spell', 'Do nothing');
 }
 
 function path2() {
-  console.log('2nd');
+  setGamePrompt(`You cast fire and see a hole in the ground right in front of you. "Good thing I didn't try walking in the dark." You notice the path ahead splits into two paths.`);
+  setButtons();
 }
 
 function path3() {
-  console.log('bababooey');
+  setGamePrompt('You go to bed and have strange visions. A gorilla riding a unicycle? Really? Oh my god hes looking at you now. What do you do?');
+  setButtons();
 }
 
 game();
