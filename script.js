@@ -50,9 +50,24 @@ function game() {
   choice1.classList.add('1');
   choice1.textContent = 'test';
 
+  let choice2 = document.createElement('button');
+  choice2.classList.add('2');
+  choice2.textContent = 'test2';
+
+  let choice3 = document.createElement('button');
+  choice3.classList.add('3');
+  choice3.textContent = 'test3';
+
+  let choice4 = document.createElement('button');
+  choice4.classList.add('4');
+  choice4.textContent = 'test4';
+
   gamePrompt.textContent = 'You wake up in total darkness. It smells weird and the floor is wet';
   selectionArea.appendChild(choice1);
-  
+  selectionArea.appendChild(choice2);
+  selectionArea.appendChild(choice3);
+  selectionArea.appendChild(choice4);
+
 }
 
 function path1() {
