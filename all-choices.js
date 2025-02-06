@@ -13,6 +13,7 @@ const gameStart = [
 ];
 allOptions.push(gameStart);
 
+//root
 const gm1 = [
   '1',
   `You try take a step forward in the dark and fall down a hole. Both of your legs are broken and you're bleeding out.`,
@@ -82,3 +83,21 @@ const gm1bb = [
   'Start Over'
 ]
 allOptions.push(gm1bb);
+
+//ending
+const gm1c = [
+  '1c',
+  `You try and cast a spell, but you're too weak. You start blacking out. You do not wake up.`,
+  '0',
+  'Start Over'
+]
+allOptions.push(gm1c);
+
+//ending
+const gm1d = [
+  '1d',
+  'You must up all of your strength and push yourself forward. Unfortunately you fall down another hole and instantly die.',
+  '0',
+  'Start Over'
+]
+allOptions.push(gm1d);
