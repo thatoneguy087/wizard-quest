@@ -28,7 +28,7 @@ allOptions.push(gm1);
 const gm2 = [
   '1a1',
   'You died',
-  'reset',
+  '0',
   'Start Over'
 ]
 allOptions.push(gm2);
