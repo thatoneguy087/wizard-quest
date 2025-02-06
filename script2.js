@@ -14,3 +14,27 @@ const gameStart = [
   'light',
   'nap'
 ]
+
+function setButtonOptions(options) {
+  for (let i = 3; i < options.length; i++) {
+    let button = document.createElement('button');
+    button.textContent = options[i];
+    choiceSelection.appendChild(button);
+  }
+}
+
+function setGamePrompt(text) {
+  gamePrompt.textContent = text;
+}
+
+function setGame(game) {
+  setGamePrompt(game[2]);
+  setButtonOptions(game);
+}
+
+
+function playGame() {
+  setGame(gameStart);
+}
+
+playGame();
