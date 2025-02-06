@@ -41,15 +41,6 @@ gameOverText.style.visibility = 'hidden';
 
 let playerChoice;
 
-function getGame(playerChoice) {
-  for (let game of allOptions) {
-    if (playerChoice == game[0]) {
-      return game;
-    }
-    //note for later, this might be an issue but we'll see.
-  }
-}
-
 function setButtons(game) {
   let btns = [];
   let btnOptions = [];
@@ -59,48 +50,26 @@ function setButtons(game) {
     let btnClass = game[i-1];
     btn.classList.add(btnClass);
     btnOptions.push(btnClass);
-    // choiceSelection.appendChild(btn);
     btns.push(btn);
   }
   choiceSelection.replaceChildren(...btns);
-  choiceSelection.addEventListener('click', (e) => {
-    if (e.target.nodeName !== 'BUTTON') {
-      return;
-    };
-  
-    playerChoice = e.target.classList[0];
-    switch (playerChoice) {
-      case btnOptions[0]:
-        setGame(getGame(playerChoice));
-        break;
-      case btnOptions[1]:
-        console.log('btn2');
-        break;
-      case btnOptions[2]:
-        console.log('btn3');
-        break;
-      case btnOptions[3]:
-        console.log('btn4');
-        break;
-      default:
-        alert('Unknown error has occured');
-    }
-  });
-
 }
 
 function setGamePrompt(text) {
   gamePrompt.textContent = text;
 }
 
-function setGame(game) {
-  setGamePrompt(game[1]);
-  setButtons(game);
-}
+//GAME SETUP
+setGamePrompt(gameStart[1]);
+setButtons(gameStart);
 
 
-function playGame() {
-  setGame(gameStart);
-}
-
-playGame();
+choiceSelection.addEventListener('click', (e) => {
+  if (e.target.nodeName !== 'BUTTON') {
+    return;
+  };
+  playerChoice = e.target.classList[0];
+  let gameChange = allOptions.find((match) => match[0] === playerChoice);
+  setGamePrompt(gameChange[1]);
+  setButtons(gameChange);
+});
