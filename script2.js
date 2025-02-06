@@ -19,14 +19,41 @@ const gameStart = [
   '1c'
 ]
 
-function setButtonOptions(game) {
+function setButtons(game) {
+  let btnOptions = [];
   for (let i = 2; i < game.length; i+=2) {
     let btn = document.createElement('button');
     btn.textContent = game[i];
     let btnClass = game[i+1];
     btn.classList.add(btnClass);
+    btnOptions.push(btnClass);
     choiceSelection.appendChild(btn);
   }
+  console.log(btnOptions);
+  choiceSelection.addEventListener('click', (e) => {
+    if (e.target.nodeName !== 'BUTTON') {
+      return;
+    };
+  
+    playerChoice = e.target.classList[0];
+    switch (playerChoice) {
+      case btnOptions[0]:
+        console.log('btn1');
+        break;
+      case btnOptions[1]:
+        console.log('btn2');
+        break;
+      case btnOptions[2]:
+        console.log('btn3');
+        break;
+      case btnOptions[3]:
+        console.log('btn4');
+        break;
+      default:
+        alert('Unknown error has occured');
+    }
+  });
+
 }
 
 function setGamePrompt(text) {
@@ -35,36 +62,12 @@ function setGamePrompt(text) {
 
 function setGame(game) {
   setGamePrompt(game[1]);
-  setButtonOptions(game);
+  setButtons(game);
 }
 
 
 function playGame() {
   setGame(gameStart);
 }
-
-choiceSelection.addEventListener('click', (e) => {
-  if (e.target.nodeName !== 'BUTTON') {
-    return;
-  };
-
-  playerChoice = Number(e.target.classList[0]);
-  switch (playerChoice) {
-    case 1:
-      console.log('btn1');
-      break;
-    case 2:
-      console.log('btn2');
-      break;
-    case 3:
-      console.log('btn3');
-      break;
-    case 4:
-      console.log('btn4');
-      break;
-    default:
-      alert('Unknown error has occured');
-  }
-});
 
 playGame();
