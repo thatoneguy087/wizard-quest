@@ -27,6 +27,7 @@ const gm1 = [
 ];
 allOptions.push(gm1);
 
+//ending
 const gm1a = [
   '1a',
   'You bite your tongue off and start bleeding out even more. You die a very slow and painful death.',
@@ -45,6 +46,25 @@ const gm1b = [
 ];
 allOptions.push(gm1b);
 
+const gm1ba = [
+  '1ba',
+  'You try yelling again. In the distance you hear frantic footsteps rapidly approaching.',
+  '1baa',
+  'Try and cast a spell',
+  '1bab',
+  'Take a nap and forget about it'
+]
+allOptions.push(gm1ba);
+
+const gm1baa = [
+  '1baa',
+  `You try and cast a spell, but you're too weak. You start blacking out. You do not wake up.`,
+  '0',
+  'Start Over'
+]
+allOptions.push(gm1baa);
+
+//ending
 const gm1bb = [
   '1bb',
   'You manage to doze off through the pain. You do not wake up again.',
