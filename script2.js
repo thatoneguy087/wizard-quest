@@ -33,11 +33,17 @@ gameOverText.style.visibility = 'hidden';
 
 let playerChoice;
 
-function getGame() {
-
+function getGame(playerChoice) {
+  for (let game of allOptions) {
+    if (playerChoice == game[0]) {
+      return game;
+    }
+    //note for later, this might be an issue but we'll see.
+  }
 }
 
 function setButtons(game) {
+  let btns = [];
   let btnOptions = [];
   for (let i = 2; i < game.length; i+=2) {
     let btn = document.createElement('button');
@@ -45,8 +51,10 @@ function setButtons(game) {
     let btnClass = game[i+1];
     btn.classList.add(btnClass);
     btnOptions.push(btnClass);
-    choiceSelection.appendChild(btn);
+    // choiceSelection.appendChild(btn);
+    btns.push(btn);
   }
+  choiceSelection.replaceChildren(...btns);
   choiceSelection.addEventListener('click', (e) => {
     if (e.target.nodeName !== 'BUTTON') {
       return;
@@ -55,7 +63,7 @@ function setButtons(game) {
     playerChoice = e.target.classList[0];
     switch (playerChoice) {
       case btnOptions[0]:
-        console.log('btn1');
+        setGame(getGame(playerChoice));
         break;
       case btnOptions[1]:
         console.log('btn2');
