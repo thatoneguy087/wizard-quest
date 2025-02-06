@@ -4,29 +4,29 @@ const allOptions = [];
 const gameStart = [
   '0',
   'wakeup',
-  '1a',
+  '1',
   'stepforward',
-  '1b',
+  '2',
   'light',
-  '1c',
+  '3',
   'nap'
 ];
 allOptions.push(gameStart);
 
 const gm1 = [
-  '1a',
+  '1',
   'fallintohole',
-  '1a1',
+  '1a',
   'bitetongue',
-  '1a2',
+  '1b',
   'yell',
-  '1a3',
+  '1c',
   'spell'
 ];
 allOptions.push(gm1);
 
 const gm2 = [
-  '1a1',
+  '1a',
   'You died',
   '0',
   'Start Over'
