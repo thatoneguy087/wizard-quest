@@ -6,19 +6,26 @@ const gamePrompt = document.querySelector('#prompt');
 const choiceSelection = document.querySelector('.choice-selection');
 gameOverText.style.visibility = 'hidden';
 
+let playerChoice;
+
 const gameStart = [
-  0,
-  0,
+  '0',
   'wakeup',
   'stepforward',
+  '1a',
   'light',
-  'nap'
+  '1b',
+  'nap',
+  '1c'
 ]
 
+
 function setButtonOptions(options) {
-  for (let i = 3; i < options.length; i++) {
+  for (let i = 2; i < options.length; i+=2) {
     let button = document.createElement('button');
     button.textContent = options[i];
+    let instance = i-2;
+    button.classList.add(instance);
     choiceSelection.appendChild(button);
   }
 }
@@ -28,13 +35,37 @@ function setGamePrompt(text) {
 }
 
 function setGame(game) {
-  setGamePrompt(game[2]);
+  setGamePrompt(game[1]);
   setButtonOptions(game);
 }
 
 
 function playGame() {
   setGame(gameStart);
+
+  choiceSelection.addEventListener('click', (e) => {
+    if (e.target.nodeName !== 'BUTTON') {
+      return;
+    };
+
+    playerChoice = Number(e.target.classList[0]);
+    switch (playerChoice) {
+      case 1:
+        console.log('btn1');
+        break;
+      case 2:
+        console.log('btn2');
+        break;
+      case 3:
+        console.log('btn3');
+        break;
+      case 4:
+        console.log('btn4');
+        break;
+      default:
+        alert('Unknown error has occured');
+    }
+  });
 }
 
 playGame();
