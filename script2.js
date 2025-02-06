@@ -13,17 +13,17 @@ const gameStart = [
 ];
 allOptions.push(gameStart);
 
-// const gm1 = [
-//   '1a',
-//   'fallintohole',
-//   'bitetongue',
-//   '1a1',
-//   'yell',
-//   '1a2',
-//   'spell',
-//   '1a3',
-// ];
-// allOptions.push(gm1);
+const gm1 = [
+  '1a',
+  'fallintohole',
+  '1a1',
+  'bitetongue',
+  '1a2',
+  'yell',
+  '1a3',
+  'spell'
+];
+allOptions.push(gm1);
 
 const gameContainer = document.querySelector('.game-container');
 const gameOverText = document.getElementById('game-over');
