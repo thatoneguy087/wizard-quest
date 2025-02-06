@@ -1,12 +1,5 @@
 'use strict'
-
-const gameContainer = document.querySelector('.game-container');
-const gameOverText = document.getElementById('game-over');
-const gamePrompt = document.querySelector('#prompt');
-const choiceSelection = document.querySelector('.choice-selection');
-gameOverText.style.visibility = 'hidden';
-
-let playerChoice;
+const allOptions = [];
 
 const gameStart = [
   '0',
@@ -17,7 +10,32 @@ const gameStart = [
   '1b',
   'nap',
   '1c'
-]
+];
+allOptions.push(gameStart);
+
+const gm1 = [
+  '1a',
+  'fallintohole',
+  'bitetongue',
+  '1a1',
+  'yell',
+  '1a2',
+  'spell',
+  '1a3',
+];
+allOptions.push(gm1);
+
+const gameContainer = document.querySelector('.game-container');
+const gameOverText = document.getElementById('game-over');
+const gamePrompt = document.querySelector('#prompt');
+const choiceSelection = document.querySelector('.choice-selection');
+gameOverText.style.visibility = 'hidden';
+
+let playerChoice;
+
+function getGame() {
+
+}
 
 function setButtons(game) {
   let btnOptions = [];
@@ -29,7 +47,6 @@ function setButtons(game) {
     btnOptions.push(btnClass);
     choiceSelection.appendChild(btn);
   }
-  console.log(btnOptions);
   choiceSelection.addEventListener('click', (e) => {
     if (e.target.nodeName !== 'BUTTON') {
       return;
