@@ -25,6 +25,14 @@ const gm1 = [
 ];
 allOptions.push(gm1);
 
+const gm2 = [
+  '1a1',
+  'You died',
+  'reset',
+  'Start Over'
+]
+allOptions.push(gm2);
+
 const gameContainer = document.querySelector('.game-container');
 const gameOverText = document.getElementById('game-over');
 const gamePrompt = document.querySelector('#prompt');
