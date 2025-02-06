@@ -17,8 +17,13 @@ function setButtons(...btns) {
 }
 
 //This is all just setup.
+const gameArea = document.querySelector('.game-area');
+const gameAreaText = document.createElement('p');
 const gamePrompt = document.querySelector('#game-prompt');
 const selectionArea = document.querySelector('.selection-container');
+let gameOverText = document.getElementById('game-over');
+gameOverText.style.visibility = 'hidden';
+console.log(gameOverText.textContent);
 gamePrompt.textContent = 'test';
 
 let playerChoice;
@@ -61,20 +66,66 @@ function game() {
       case 3:
         path3();
         break;
+      case 4:
+        path4();
+        break;
       default:
         alert('Unknown error has occured');
     }
   });
 }
 
+function gameOver() {
+  gameOverText.style.visibility = 'visible';
+  setButtons('reset');
+}
+
 function gameStart() {
+  gameOverText.style.visibility = 'hidden';
   setGamePrompt('You wake up in total darkness. It smells weird and the floor is wet');
   setButtons('Take a step forward in the dark', 'Cast lesser-fire for light', 'Take a nap');
 }
-
+// **** PATH ONE ********
 function path1() {
   setGamePrompt(`You try take a setp forward in the dark and fall down a hole. Both of your legs are broken and you're bleeding out`);
   setButtons('Bite your tongue off', 'Yell out for help', 'Cast a forbidden spell', 'Do nothing');
+  selectionArea.addEventListener('click', (e) => {
+    const isBtn = e.target.nodeName === 'BUTTON';
+    if (!isBtn) {
+      return;
+    };
+
+    playerChoice = Number(e.target.classList[0]);
+    switch (playerChoice) {
+      case 1:
+        path1a();
+        break;
+      case 2:
+        path1b();
+        break;
+      case 3:
+        path1c();
+        break;
+      case 4:
+        path1d();
+        break;
+      default:
+        alert('Unknown error has occured');
+    }
+  });
+}
+
+function path1a() {
+  setGamePrompt('You bite your tongue off and start bleeding out even more. You die a very slow and painful death.')
+  gameOver();
+  //game finish
+  selectionArea.addEventListener('click', (e) => {
+    const isBtn = e.target.nodeName === 'BUTTON';
+    if (!isBtn) {
+      return;
+    };
+    game();
+  });
 }
 
 function path2() {
@@ -86,5 +137,7 @@ function path3() {
   setGamePrompt('You go to bed and have strange visions. A gorilla riding a unicycle? Really? Oh my god hes looking at you now. What do you do?');
   setButtons();
 }
+
+
 
 game();
