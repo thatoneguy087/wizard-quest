@@ -56,6 +56,7 @@ const gm1ba = [
 ]
 allOptions.push(gm1ba);
 
+//ending
 const gm1baa = [
   '1baa',
   `You try and cast a spell, but you're too weak. You start blacking out. You do not wake up.`,
@@ -63,6 +64,15 @@ const gm1baa = [
   'Start Over'
 ]
 allOptions.push(gm1baa);
+
+//ending
+const gm1bab = [
+  '1bab',
+  'You manage to doze off through the pain. You do not wake up.',
+  '0',
+  'Start Over'
+]
+allOptions.push(gm1bab);
 
 //ending
 const gm1bb = [
