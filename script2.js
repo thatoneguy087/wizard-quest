@@ -4,26 +4,26 @@ const allOptions = [];
 const gameStart = [
   '0',
   'wakeup',
-  'stepforward',
   '1a',
-  'light',
+  'stepforward',
   '1b',
-  'nap',
-  '1c'
+  'light',
+  '1c',
+  'nap'
 ];
 allOptions.push(gameStart);
 
-const gm1 = [
-  '1a',
-  'fallintohole',
-  'bitetongue',
-  '1a1',
-  'yell',
-  '1a2',
-  'spell',
-  '1a3',
-];
-allOptions.push(gm1);
+// const gm1 = [
+//   '1a',
+//   'fallintohole',
+//   'bitetongue',
+//   '1a1',
+//   'yell',
+//   '1a2',
+//   'spell',
+//   '1a3',
+// ];
+// allOptions.push(gm1);
 
 const gameContainer = document.querySelector('.game-container');
 const gameOverText = document.getElementById('game-over');
@@ -45,10 +45,10 @@ function getGame(playerChoice) {
 function setButtons(game) {
   let btns = [];
   let btnOptions = [];
-  for (let i = 2; i < game.length; i+=2) {
+  for (let i = 3; i < game.length; i+=2) {
     let btn = document.createElement('button');
     btn.textContent = game[i];
-    let btnClass = game[i+1];
+    let btnClass = game[i-1];
     btn.classList.add(btnClass);
     btnOptions.push(btnClass);
     // choiceSelection.appendChild(btn);
