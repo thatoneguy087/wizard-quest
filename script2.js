@@ -38,7 +38,7 @@ allOptions.push(gm1a);
 const gameContainer = document.querySelector('.game-container');
 const gameOverText = document.getElementById('game-over');
 const gamePrompt = document.querySelector('#prompt');
-const choiceSelection = document.querySelector('.choice-selection');
+const choiceSelection = document.querySelector('.button-container');
 gameOverText.style.visibility = 'hidden';
 
 let playerChoice;
