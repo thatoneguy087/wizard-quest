@@ -35,6 +35,7 @@ button {
   width: 100%;
   height: 33%;
   background-color: red;
+  text-align: center;
 }
 
 .choice-selection {
@@ -51,6 +52,6 @@ button {
   flex-wrap: wrap;
   align-content: space-between;
   justify-content: space-between;
-  width: 304px;
+  width: 310px;
   height: 72px;
 }
