@@ -3,35 +3,37 @@ const allOptions = [];
 
 const gameStart = [
   '0',
-  'wakeup',
+  'You wake up in total darkness. It smells weird and the floor is wet.',
   '1',
-  'stepforward',
+  'Take a step forward in the dark.',
   '2',
-  'light',
+  'Cast lesser-fire for light.',
   '3',
-  'nap'
+  'Take a nap.'
 ];
 allOptions.push(gameStart);
 
 const gm1 = [
   '1',
-  'fallintohole',
+  `You try take a setp forward in the dark and fall down a hole. Both of your legs are broken and you're bleeding out.`,
   '1a',
-  'bitetongue',
+  'Bite your tongue off',
   '1b',
-  'yell',
+  'Yell out for help.',
   '1c',
-  'spell'
+  'Cast a forbidden spell.',
+  '1d',
+  'Try and crawl around'
 ];
 allOptions.push(gm1);
 
-const gm2 = [
+const gm1a = [
   '1a',
-  'You died',
+  'You bite your tongue off and start bleeding out even more. You die a very slow and painful death.',
   '0',
   'Start Over'
 ]
-allOptions.push(gm2);
+allOptions.push(gm1a);
 
 const gameContainer = document.querySelector('.game-container');
 const gameOverText = document.getElementById('game-over');
