@@ -9,7 +9,9 @@ const gameStart = [
   '2',
   'Cast lesser-fire for light',
   '3',
-  'Take a nap'
+  'Take a nap',
+  '4',
+  'Cast Portal'
 ];
 allOptions.push(gameStart);
 
@@ -96,7 +98,7 @@ allOptions.push(gm1c);
 //ending
 const gm1d = [
   '1d',
-  'You must up all of your strength and push yourself forward. Unfortunately you fall down another hole and instantly die.',
+  'You muster up all of your strength and push yourself forward. Unfortunately you fall down another hole and instantly die.',
   '0',
   'Start Over'
 ]
@@ -127,13 +129,15 @@ allOptions.push(gm3a);
 //back to start
 const gm3b = [
   '3b',
-  'You wake up. nothing has changed.',
+  'You wake up. Nothing has changed.',
   '1',
   'Take a step forward in the dark',
   '2',
   'Cast lesser-fire for light',
   '3',
-  'Take a nap'
+  'Take a nap',
+  '4',
+  'Cast Portal'
 ]
 allOptions.push(gm3b);
 
