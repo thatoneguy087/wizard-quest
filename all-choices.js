@@ -101,3 +101,38 @@ const gm1d = [
   'Start Over'
 ]
 allOptions.push(gm1d);
+
+
+//root
+const gm3 = [
+  '3',
+  'You close your eyes and start taking a nap. You have strange visions or wizard-related things',
+  '3a',
+  'Dream harder',
+  '3b',
+  'Wake up'
+]
+allOptions.push(gm3);
+
+const gm3a = [
+  '3a',
+  'You start dreaming about a cave. The cave contains horrors beyond your comprehension.',
+  '3aa',
+  'Dream even harder',
+  '3b',
+  'Wake up'
+]
+allOptions.push(gm3a);
+
+//back to start
+const gm3b = [
+  '3b',
+  'You wake up. nothing has changed.',
+  '1',
+  'Take a step forward in the dark',
+  '2',
+  'Cast lesser-fire for light',
+  '3',
+  'Take a nap'
+]
+allOptions.push(gm3b);
