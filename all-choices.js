@@ -136,3 +136,72 @@ const gm3b = [
   'Take a nap'
 ]
 allOptions.push(gm3b);
+
+const gm3aa = [
+  '3aa',
+  'You see youself, floating through space.',
+  '3aaa',
+  'Inspect yourself closer',
+  '3b',
+  'Wake up'
+]
+allOptions.push(gm3aa);
+
+const gm3aaa = [
+  '3aaa',
+  `You inspect your face. Good god you're ugly.`,
+  '3aaaa',
+  'Inspect yourself even closer',
+  '3b',
+  'Wake up'
+]
+allOptions.push(gm3aaa);
+
+const gm3aaaa = [
+  '3aaaa',
+  `You've inspected yourself WAY too close and wake youself up. For some reason, you're in a big open field.`,
+  '3aaaaa',
+  'Relax',
+  '3aaaab',
+  'Wander around'
+]
+allOptions.push(gm3aaaa);
+
+const gm3aaaab = [
+  '3aaaab',
+  'You start wandering around. This field seems endless.',
+  '3aaaaa',
+  'Relax',
+  '3aaaaba',
+  'Continue wandering'
+];
+allOptions.push(gm3aaaab);
+
+const gm3aaaaba = [
+  '3aaaaba',
+  'You continue wandering around. This field seems endless.',
+  '3aaaaa',
+  'Relax',
+  '3aaaabaa',
+  'Continue wandering'
+];
+allOptions.push(gm3aaaaba);
+
+const gm3aaaabaa = [
+  '3aaaabaa',
+  `You're still wandering around. This field seems endless.`,
+  '3aaaaa',
+  'Relax',
+  '3aaaaba',
+  'Continue wandering'
+];
+allOptions.push(gm3aaaabaa);
+
+//ending
+const gm3aaaaa = [
+  '3aaaaa',
+  `You lay back down and relax. This is what it's all about. You are one with relaxation. The end.`,
+  '0',
+  'Start Over'
+]
+allOptions.push(gm3aaaaa);
