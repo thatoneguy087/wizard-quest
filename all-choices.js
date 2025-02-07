@@ -5,22 +5,22 @@ const gameStart = [
   '0',
   'You wake up in total darkness. It smells weird and the floor is wet.',
   '1',
-  'Take a step forward in the dark',
+  'Take a step forward',
   '2',
-  'Cast greater-fire for light',
+  'Cast greater-fire',
   '3',
   'Take a nap',
   '4',
-  'Cast Portal'
+  'Cast greater-portal'
 ];
 allOptions.push(gameStart);
 
 //root
 const gm1 = [
   '1',
-  `You take a step forward in the dark and fall down a hole. Both of your legs are broken and you're bleeding out.`,
+  `You take a step forward and fall down a hole. Both of your legs are broken and you're bleeding out.`,
   '1a',
-  'Bite your tongue off',
+  'End it. Bite your tongue off',
   '1b',
   'Yell out for help',
   '1c',
@@ -107,19 +107,21 @@ allOptions.push(gm1d);
 //root 
 const gm2 = [
   '2',
-  'You can greater-fire to provide light. You notice a peculiar hole in the ground right in front of you. You also see a path to your left.',
+  'You cast greater-fire and now have light. You notice a peculiar hole in the ground right in front of you. You also see a path to your left.',
   '2a',
   'Jump down the hole',
   '2b',
-  'Follow the path',
+  'Follow the left-path',
+  '2c',
+  'Uncast greater-Fire'
 ]
 allOptions.push(gm2);
 
 const gm2a = [
   '2a',
-  `You jump down the whole. It's way deeper than you thought. You fall to the bottom and break your legs. You're heavily bleeding out.`,
+  `You jump down the hole. It's way deeper than you thought. You fall to the bottom and break your legs. You're heavily bleeding out.`,
   '1a',
-  'Bite your tongue off',
+  'End it. Bite your tongue off',
   '1b',
   'Yell out for help',
   '1c',
@@ -129,6 +131,43 @@ const gm2a = [
 ]
 allOptions.push(gm2a);
 
+const gm2b = [
+  '2b',
+  `You go through the path to your left. Still nothing in sight.`,
+  '2ba',
+  'Continue through the path',
+  '2bb',
+  'Go back',
+]
+allOptions.push(gm2b);
+
+const gm2bb = [
+  '2bb',
+  `You go back. Nothing has changed.`,
+  '2a',
+  'Jump down the hole',
+  '4b',
+  'Uncast greater-fire',
+  '3',
+  'Take a nap',
+  '4',
+  'Cast greater-portal',
+]
+allOptions.push(gm2bb);
+
+const gm2c = [
+  '2c',
+  `You're shrouded in darkness once again.`,
+  '1',
+  'Take a step forward',
+  '2',
+  'Cast greater-fire',
+  '3',
+  'Take a nap',
+  '4',
+  'Cast greater-portal'
+]
+allOptions.push(gm2c);
 //root
 const gm3 = [
   '3',
@@ -155,13 +194,13 @@ const gm3b = [
   '3b',
   'You wake up. Nothing has changed.',
   '1',
-  'Take a step forward in the dark',
+  'Take a step forward',
   '2',
   'Cast lesser-fire for light',
   '3',
   'Take a nap',
   '4',
-  'Cast Portal'
+  'Cast greater-portal'
 ]
 allOptions.push(gm3b);
 
@@ -237,11 +276,11 @@ allOptions.push(gm3aaaaa);
 //root
 const gm4 = [
   '4',
-  `You cast a portal in front of you. From the small amount of emitted light, you can see that you portal is directly above a very peculiar hole in the ground.`,
+  `You cast greater-portal in front of you. From the small amount of emitted light, you can see that you portal is directly above a very peculiar hole in the ground.`,
   '4a',
   'Try and jump through the portal',
   '4b',
-  'Uncast portal'
+  'Uncast greater-portal'
 ]
 allOptions.push(gm4);
 
@@ -249,7 +288,7 @@ const gm4a = [
   '4a',
   `You miss your jump and fall down the hole. Both of your legs are broken and you're bleeding out`,
   '1a',
-  'Bite your tongue off',
+  'End it. Bite your tongue off',
   '1b',
   'Yell out for help',
   '1c',
@@ -263,13 +302,13 @@ const gm4b = [
   '4b',
   `Back to darkness.`,
   '1',
-  'Take a step forward in the dark',
+  'Take a step forward',
   '2',
   'Cast lesser-fire for light',
   '3',
   'Take a nap',
   '4',
-  'Cast Portal'
+  'Cast greater-portal'
 ]
 allOptions.push(gm4b);
 
