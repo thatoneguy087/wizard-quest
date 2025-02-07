@@ -7,7 +7,7 @@ const gameStart = [
   '1',
   'Take a step forward in the dark',
   '2',
-  'Cast lesser-fire for light',
+  'Cast greater-fire for light',
   '3',
   'Take a nap',
   '4',
@@ -18,13 +18,13 @@ allOptions.push(gameStart);
 //root
 const gm1 = [
   '1',
-  `You try take a step forward in the dark and fall down a hole. Both of your legs are broken and you're bleeding out.`,
+  `You take a step forward in the dark and fall down a hole. Both of your legs are broken and you're bleeding out.`,
   '1a',
   'Bite your tongue off',
   '1b',
   'Yell out for help',
   '1c',
-  'Cast a forbidden spell',
+  'Cast greater-telportation spell',
   '1d',
   'Try and crawl around'
 ];
@@ -62,7 +62,7 @@ allOptions.push(gm1ba);
 //ending
 const gm1baa = [
   '1baa',
-  `You try and cast a spell, but you're too weak. You start blacking out. You do not wake up.`,
+  `You try to cast greater-teleportation, but you're too weak. You start blacking out. You do not wake up.`,
   '0',
   'Start Over'
 ]
@@ -89,7 +89,7 @@ allOptions.push(gm1bb);
 //ending
 const gm1c = [
   '1c',
-  `You try and cast a spell, but you're too weak. You start blacking out. You do not wake up.`,
+  `You try to cast greater-teleportation, but you're too weak. You start blacking out. You do not wake up.`,
   '0',
   'Start Over'
 ]
@@ -209,3 +209,43 @@ const gm3aaaaa = [
   'Start Over'
 ]
 allOptions.push(gm3aaaaa);
+
+
+const gm4 = [
+  '4',
+  `You cast a portal in front of you. From the small amount of emitted light, you can see that you portal is directly above a very peculiar hole in the ground.`,
+  '4a',
+  'Try and jump through the portal',
+  '4b',
+  'Uncast portal'
+]
+allOptions.push(gm4);
+
+const gm4a = [
+  '4a',
+  `You miss your jump and fall down the hole. Both of your legs are broken and you're bleeding out`,
+  '1a',
+  'Bite your tongue off',
+  '1b',
+  'Yell out for help',
+  '1c',
+  'Cast teleportation spell',
+  '1d',
+  'Try and crawl around'
+]
+allOptions.push(gm4a);
+
+const gm4b = [
+  '4b',
+  `Back to darkness.`,
+  '1',
+  'Take a step forward in the dark',
+  '2',
+  'Cast lesser-fire for light',
+  '3',
+  'Take a nap',
+  '4',
+  'Cast Portal'
+]
+allOptions.push(gm4b);
+
