@@ -104,6 +104,30 @@ const gm1d = [
 ]
 allOptions.push(gm1d);
 
+//root 
+const gm2 = [
+  '2',
+  'You can greater-fire to provide light. You notice a peculiar hole in the ground right in front of you. You also see a path to your left.',
+  '2a',
+  'Jump down the hole',
+  '2b',
+  'Follow the path',
+]
+allOptions.push(gm2);
+
+const gm2a = [
+  '2a',
+  `You jump down the whole. It's way deeper than you thought. You fall to the bottom and break your legs. You're heavily bleeding out.`,
+  '1a',
+  'Bite your tongue off',
+  '1b',
+  'Yell out for help',
+  '1c',
+  'Cast greater-telportation spell',
+  '1d',
+  'Try and crawl around'
+]
+allOptions.push(gm2a);
 
 //root
 const gm3 = [
@@ -210,7 +234,7 @@ const gm3aaaaa = [
 ]
 allOptions.push(gm3aaaaa);
 
-
+//root
 const gm4 = [
   '4',
   `You cast a portal in front of you. From the small amount of emitted light, you can see that you portal is directly above a very peculiar hole in the ground.`,
