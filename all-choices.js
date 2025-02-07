@@ -112,8 +112,6 @@ const gm2 = [
   'Jump down the hole',
   '2b',
   'Follow the left-path',
-  '2c',
-  'Uncast greater-Fire'
 ]
 allOptions.push(gm2);
 
@@ -146,14 +144,22 @@ const gm2bb = [
   `You go back. Nothing has changed.`,
   '2a',
   'Jump down the hole',
-  '4b',
-  'Uncast greater-fire',
+  '2b',
+  'Follow the left-path',
   '3',
   'Take a nap',
-  '4',
+  '4z',
   'Cast greater-portal',
 ]
 allOptions.push(gm2bb);
+
+const gm4z = [
+  '4z',
+  `You can only cast one spell at a time. You instantly die from attempting to cast 2 spells at once.`,
+  '0',
+  'Start Over'
+]
+allOptions.push(gm4z);
 
 const gm2c = [
   '2c',
@@ -168,6 +174,26 @@ const gm2c = [
   'Cast greater-portal'
 ]
 allOptions.push(gm2c);
+
+const gm2ba = [
+  '2ba',
+  `You see light in the distance. An exit!`,
+  '2baa',
+  'Go to the exit',
+  '2bb',
+  'Go back',
+]
+allOptions.push(gm2ba);
+
+const gm2baa = [
+  '2baa',
+  `You finally made it outside! Finally you can start killing again! (you were thrown in the cave for your heinous crimes against humanity) The end.`,
+  '0',
+  'Start Over',
+
+]
+allOptions.push(gm2baa);
+
 //root
 const gm3 = [
   '3',
