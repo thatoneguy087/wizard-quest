@@ -13,7 +13,7 @@ html {
 .game-container{
   width: 640px;
   height: 380px;
-  background-color: gray;
+  background-color: black;
   margin: 0 auto;
   margin-top: 24px;
   display: flex;

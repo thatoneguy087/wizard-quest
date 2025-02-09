@@ -26,9 +26,14 @@ function setGamePrompt(text) {
   gamePrompt.textContent = text;
 }
 
+function setBackground(img) {
+  gameContainer.style.backgroundImage = `url('./images/${img}.jpeg')`;
+}
+
 //GAME SETUP
 setGamePrompt(gameStart[1]);
 setButtons(gameStart);
+setBackground(gameStart[0]);
 
 
 choiceSelection.addEventListener('click', (e) => {
@@ -38,5 +43,6 @@ choiceSelection.addEventListener('click', (e) => {
   playerChoice = e.target.classList[0];
   let gameChange = allOptions.find((match) => match[0] === playerChoice);
   setGamePrompt(gameChange[1]);
+  setBackground(gameChange[0]);
   setButtons(gameChange);
 });
