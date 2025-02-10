@@ -78,9 +78,19 @@ button:hover {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url('./images/3aaa.jpeg');
+  background-image: url('./images/splash.jpeg');
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+}
+
+.splash button {
+  width: 150px;
+  height: 34px;
+  background-color: black;
+  border-style: double;
+  border-color: white;
+  color: white;
+  margin-bottom: 50px;
 }
