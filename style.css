@@ -94,3 +94,13 @@ button:hover {
   color: white;
   margin-bottom: 50px;
 }
+
+.tag {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 10px;
+}
+
+.tag a {
+  color: white;
+}
