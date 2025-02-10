@@ -1,5 +1,11 @@
 'use strict'
 
+const playGame = document.querySelector('.play');
+const splashScreen = document.querySelector('.splash');
+playGame.addEventListener('click', (e) => {
+  splashScreen.style.visibility = 'hidden';
+});
+
 const gameContainer = document.querySelector('.game-container');
 const gameOverText = document.getElementById('game-over');
 const gamePrompt = document.querySelector('#prompt');
@@ -46,3 +52,4 @@ choiceSelection.addEventListener('click', (e) => {
   setBackground(gameChange[0]);
   setButtons(gameChange);
 });
+
